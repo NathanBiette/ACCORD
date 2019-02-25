@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_options"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="tv.danmaku.ijk.media.example.smartcams.OptionsActivity"
+    android:baselineAligned="false"
+    android:weightSum="1"
+    android:orientation="horizontal"
+    android:background="#ffffff">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="0.25"
+        android:id="@+id/optionsLeftLayout">
+
+        <Button
+            android:text="OK"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="15%"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/okButton" />
+
+        <Button
+            android:text="Menu musicien"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="15%"
+            android:id="@+id/menuMusicien"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:weightSum="1"
+        android:id="@+id/optionsMiddleLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_weight="0.65"
+            android:background="#a3a4a4"
+            android:id="@+id/scene">
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.35"
+            android:id="@+id/optionsBottomMiddleLayout">
+
+            <tv.danmaku.ijk.media.example.widget.media.IjkVideoView
+                android:id="@+id/video_view_option"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+
+            <TableLayout
+                android:id="@+id/hud_view_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:background="@color/ijk_transparent_dark"
+                android:padding="8dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_weight="0.25"
+        android:orientation="vertical"
+        android:id="@+id/optionsRightLayout">
+
+        <Button
+            android:text="Retour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="15%"
+            android:id="@+id/returnButton" />
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="40%"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:columnCount="3"
+            app:rowCount="2"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:id="@+id/optionsBottomRightLayout"
+            tools:targetApi="ice_cream_sandwich">
+
+            <ImageButton
+                android:id="@+id/optionsZoomPlus"
+                android:gravity="center"
+                android:background="@null"
+                app:layout_row="0"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:src="@android:drawable/ic_input_add" />
+
+            <ImageButton
+                android:id="@+id/optionsZoomMinus"
+                android:gravity="center"
+                android:background="@null"
+                app:layout_row="0"
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:src="@android:drawable/ic_delete" />
+
+            <ImageButton
+                android:src="@android:drawable/ic_media_rew"
+                android:id="@+id/optionsLeft"
+                android:gravity="center"
+                app:layout_row="1"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:background="@null"/>
+
+            <ImageButton
+                android:src="@android:drawable/arrow_down_float"
+                android:id="@+id/optionsDown"
+                android:gravity="center"
+                app:layout_column="1"
+                app:layout_row="1"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:background="@null"/>
+
+            <ImageButton
+                android:id="@+id/optionsUp"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+
+            <ImageButton
+                android:src="@android:drawable/ic_media_ff"
+                android:id="@+id/optionsRight"
+                android:gravity="center"
+                app:layout_column="2"
+                app:layout_row="1"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:background="@null"/>
+        </android.support.v7.widget.GridLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>

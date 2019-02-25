@@ -1,0 +1,1 @@
+function a = print_pseudoinv(filename, Fs) load(filename);absc = zeros([size(coefs(1,:))]);for i=1:length(absc)  absc(i)=(i*delta)/Fs;end;figure;plot(absc, coefs(1,:), absc, coefs(2,:), absc, coefs(3,:),absc,  coefs(4,:));a = 0;return;end

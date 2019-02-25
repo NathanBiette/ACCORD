@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayoutAssistant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutMain2"
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent="25%"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom">
+
+        <tv.danmaku.ijk.media.example.widget.media.IjkVideoView
+            android:id="@+id/video_view_main2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <TableLayout
+            android:id="@+id/hud_view_main2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:background="@color/ijk_transparent_dark"
+            android:padding="8dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <tv.danmaku.ijk.media.example.widget.media.IjkVideoView
+            android:id="@+id/video_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <TableLayout
+            android:id="@+id/hud_view_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:background="@color/ijk_transparent_dark"
+            android:padding="8dp" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/validCadreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="Valider" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectionSuiviLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/validSuiviButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:text="Valider" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/cadreButton"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="12%"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Selection cadre" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAssistant"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:weightSum="1">
+
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/assistantLeftLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="0.25"
+            android:background="@android:color/transparent"
+            android:weightSum="1">
+
+            <ToggleButton
+                android:id="@+id/record"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="15%"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Enregistrer"
+                android:textOff="Enregistrer"
+                android:textOn="Stop" />
+
+            <CheckBox
+                android:id="@+id/assistantSuiviAutomatiqueBox"
+                android:layout_width="wrap_content"
+                app:layout_heightPercent="10%"
+                android:layout_above="@+id/assistantToggleModeButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:background="#88FFFFFF"
+                android:textSize="15sp"
+                android:text="Suivi automatique" />
+
+            <RelativeLayout
+                android:id="@+id/assistantSceneLayout"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="40%"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#88FFFFFF">
+
+            </RelativeLayout>
+
+            <ToggleButton
+                android:id="@+id/assistantToggleModeButton"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="10%"
+                android:layout_above="@+id/assistantSceneLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="15sp"
+                android:text="Manuel"
+                android:textOff="Manuel"
+                android:textOn="Automatique" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/assistantMiddleLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.50"
+            android:background="@android:color/transparent"
+            android:weightSum="1">
+
+            <ToggleButton
+                android:id="@+id/mobileButton"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="15%"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="Mobile"
+                android:textOff="Mobile"
+                android:textOn="Mobile" />
+
+            <ToggleButton
+                android:id="@+id/panButton"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="15%"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="PAN"
+                android:textOff="PAN"
+                android:textOn="PAN" />
+
+            <ToggleButton
+                android:id="@+id/hdButton"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="15%"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="HD"
+                android:textOff="HD"
+                android:textOn="HD" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/assistantRightLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="0.25"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/camText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="#88FFFFFF"
+                android:text="Caméra mobile" />
+
+            <ToggleButton
+                android:id="@+id/switchCamButton"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="40%"
+                android:layout_alignParentBottom="true"
+                android:textOff=""
+                android:textOn="" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>
+
+
+
+

@@ -1,0 +1,1 @@
+include ':ijkplayer-java', ':ijkplayer-x86_64', ':ijkplayer-x86', 'SmartCams', ':ijkplayer-armv5', ':ijkplayer-arm64', ':ijkplayer-exo', ':ijkplayer-armv7a'

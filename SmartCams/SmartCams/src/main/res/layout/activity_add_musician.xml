@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_musician"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="tv.danmaku.ijk.media.example.smartcams.AddMusicianActivity">
+
+    <TextView
+        android:id="@+id/instrumentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instrument :" />
+
+    <Spinner
+        android:id="@+id/instrument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/canalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Canal DMX :" />
+
+    <EditText
+        android:id="@+id/canal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="1 - 512"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/voieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Voie :" />
+
+    <EditText
+        android:id="@+id/voie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="1 - 8"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/selectionCadreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Selection cadre" />
+
+    <Button
+        android:id="@+id/addMusicianButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Valider" />
+</LinearLayout>

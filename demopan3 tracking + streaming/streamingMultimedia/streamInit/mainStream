@@ -1,0 +1,15 @@
+/home/nathan/bin/ffmpeg -y -f v4l2 -s 1280x720 -r 10 \
+-i /dev/video1 \
+-f v4l2 -s 1280x720 -r 10 \
+-i /dev/video0 \
+-filter_complex \
+"[0:v] split=3 [scalein][cropin][fpsin];\
+ [scalein] scale=720:480 [scaleout];[scaleout] split [stream0][input0];\
+ [cropin] crop=720:480:0:0 [input1];\
+ [fpsin] fps=1 [fpsout];\
+ [1:v] scale=720:480 [scaleout2];[scaleout2] split [stream2][input2];\
+ [input0][input1][input2] streamselect=inputs=3:map=1 [out]" \
+ -map "[stream0]" -pix_fmt yuv420p -profile:v baseline -level 3.0 -c:v libx264 -tune zerolatency -preset ultrafast -x264opts crf=28 -x264opts keyint=100:min-keyint=20 -f mpegts udp://137.194.22.95:1234\
+ -map "[stream2]" -pix_fmt yuv420p -profile:v baseline -level 3.0 -c:v libx264 -tune zerolatency -preset ultrafast -x264opts crf=28 -x264opts keyint=100:min-keyint=20 -f mpegts udp://137.194.22.95:1235\
+ -map "[fpsout]" image%d.png\
+ -map "[out]" -c:v libx264 out.mp4

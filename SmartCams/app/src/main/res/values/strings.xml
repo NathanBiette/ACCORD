@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SmartCams</string>
+    <string-array name="instruments_array">
+        <item>Guitare électrique</item>
+        <item>Guitare acoustique</item>
+        <item>Chanteur</item>
+        <item>Batterie</item>
+        <item>Piano</item>
+        <item>Violon</item>
+    </string-array>
+
+</resources>

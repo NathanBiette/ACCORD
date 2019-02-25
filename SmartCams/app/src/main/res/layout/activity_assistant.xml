@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="0.25"
+        android:id="@+id/assistantLeftLayout"
+        android:weightSum="1">
+
+        <ToggleButton
+            android:text="Enregistrer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/record"
+            android:autoText="false"
+            android:textOff="Enregistrer"
+            android:textOn="Stop"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1.02" />
+
+        <CheckBox
+            android:text="Suivi automatique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/assistantSuiviAutomatiqueBox"
+            android:layout_above="@+id/assistantToggleModeButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/assistantSceneLayout">
+
+        </RelativeLayout>
+
+        <ToggleButton
+            android:text="Manuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/assistantToggleModeButton"
+            android:textOff="Manuel"
+            android:textOn="Automatique"
+            android:layout_above="@+id/assistantSceneLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:weightSum="1"
+        android:id="@+id/assistantMiddleLayout">
+
+        <ToggleButton
+            android:text="Mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobileButton"
+            android:autoText="false"
+            android:textOff="Mobile"
+            android:textOn="Mobile"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ToggleButton
+            android:text="PAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/panButton"
+            android:elevation="0dp"
+            android:autoText="false"
+            android:textOff="PAN"
+            android:textOn="PAN"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ToggleButton
+            android:text="HD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hdButton"
+            android:autoText="false"
+            android:textOff="HD"
+            android:textOn="HD"
+            android:layout_alignParentBottom="true"
+<<<<<<< HEAD
+            android:layout_centerHorizontal="true" />
+=======
+            android:layout_alignLeft="@+id/testCadrage"
+            android:layout_alignStart="@+id/testCadrage" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/testCadrage"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210dp" />
+>>>>>>> origin/android_interface_graphique
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_weight="0.25"
+        android:id="@+id/assistantRightLayout">
+
+        <TextView
+            android:text="Caméra mobile"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/camText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="top|right" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/switchCamButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:autoText="false"
+            android:textOff="Switch to 4K"
+            android:textOn="Switch to Mobile"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.20" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
